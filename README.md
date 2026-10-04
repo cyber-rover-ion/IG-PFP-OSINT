@@ -12,3 +12,6 @@ A small research utility for retrieving a public Instagram profile picture URL f
 ## Responsible Use
 
 Use the project only with publicly available information and respect the terms and policies of the services being accessed. Do not use it to bypass access controls or obtain private information.
+## Creator
+
+Made by **JebinTech**.
