@@ -5,10 +5,10 @@ A simple, educational Python tool to retrieve public profile picture URLs from I
 > **Disclaimer:** This tool only works on **PUBLIC** accounts. Using this on private accounts requires authentication, which is not included here to prevent account bans. For educational purposes only.
 
 ## Features
-- ✅ Cross-platform (Linux, Android/Termux, Windows, macOS)
-- ✅ Retrieves High-Resolution Profile Pictures (if public)
-- ✅ No external API keys required
-- ✅ CLI-based with color output
+-  Cross-platform (Linux, Android/Termux, Windows, macOS)
+-  Retrieves High-Resolution Profile Pictures (if public)
+-  No external API keys required
+-  CLI-based with color output
 
 ## Installation
 
