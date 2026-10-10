@@ -1,21 +1,27 @@
 # IG-PFP-OSINT
 
-A small OSINT and web-data research utility focused on retrieving publicly accessible Instagram profile-picture information.
+A small OSINT research utility for exploring publicly accessible Instagram profile-picture information.
 
 ## Overview
 
-IG-PFP-OSINT explores how public profile-page data can be retrieved and processed without requiring Instagram login credentials. The project is intended for learning and legitimate research involving publicly available information.
+IG-PFP-OSINT is a learning-oriented project focused on retrieving and handling public profile-page information. Its scope is limited to data that is publicly accessible through the project's supported workflow.
 
-## Scope
+## Intended Use
 
-The project focuses on public profile data and a limited retrieval workflow. It should not be treated as a way to access private accounts or bypass authentication and access controls.
+- Learn about public web data retrieval
+- Explore basic OSINT workflows
+- Understand how profile-picture information is handled by web tools
 
 ## Responsible Use
 
-Use this project only with information that is publicly accessible and in accordance with applicable laws and service policies.
+Use this project only for lawful, legitimate research and respect platform rules and individual privacy.
 
-Do not use it to access private information, bypass security controls, harass individuals, or conduct unauthorized tracking.
+This project is not intended to access private accounts, bypass authentication, evade access controls, harass individuals, or enable unauthorized tracking. Public availability does not remove the responsibility to use information ethically.
 
-## Creator
+## Getting Started
 
-Made by **JebinTech**.
+Review the source code and its configuration before running it. Follow any setup requirements documented in the project files, and verify that your use complies with applicable laws and service policies.
+
+## Maintainer
+
+**JebinTech**
