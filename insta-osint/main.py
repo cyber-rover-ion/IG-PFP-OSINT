@@ -30,6 +30,11 @@ def banner():
 {Colors.RESET}""")
 
 def get_pfp(username):
+    username = str(username).strip().lstrip('@')
+    if not re.fullmatch(r'[A-Za-z0-9._]{1,30}', username):
+        print(f"{Colors.RED}[!] Invalid username. Use 1–30 letters, numbers, periods, or underscores.{Colors.RESET}")
+        return
+
     url = f"https://www.instagram.com/{username}/"
     
     # Mimicking a standard browser to avoid immediate blocking
@@ -68,13 +73,7 @@ def get_pfp(username):
         user_data = data['entry_data']['ProfilePage'][0]['graphql']['user']
 
         if user_data['is_private']:
-            print(f"{Colors.YELLOW}[!] Warning: Account is PRIVATE.{Colors.RESET}")
-            print(f"{Colors.YELLOW}[!] Limited data available without authentication (which is risky).{Colors.RESET}")
-            # Even private accounts sometimes leak the low-res PFP in the initial load, let's check
-            pfp_url = user_data.get('profile_pic_url')
-            if pfp_url:
-                print(f"{Colors.GREEN}[+] Found Low-Res PFP (Private Account):{Colors.RESET}")
-                print(pfp_url)
+            print(f"{Colors.YELLOW}[!] This account is private. No profile-picture data will be displayed.{Colors.RESET}")
             return
 
         # Extract HD PFP
