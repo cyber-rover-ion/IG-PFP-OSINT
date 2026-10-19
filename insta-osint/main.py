@@ -47,6 +47,12 @@ def get_pfp(username):
 
     try:
         response = requests.get(url, headers=headers, timeout=10)
+        if response.status_code == 429:
+            print(f"{Colors.YELLOW}[!] Rate limited (HTTP 429). Wait before trying again.{Colors.RESET}")
+            return
+        if response.status_code >= 500:
+            print(f"{Colors.YELLOW}[!] Instagram is temporarily unavailable (HTTP {response.status_code}). Try again later.{Colors.RESET}")
+            return
         
         if response.status_code == 404:
             print(f"{Colors.RED}[!] Error 404: User '{username}' not found.{Colors.RESET}")
