@@ -59,6 +59,12 @@ def get_pfp(username):
         if response.status_code == 403:
             print(f"{Colors.RED}[!] Error 403: Access Forbidden. Instagram blocked the request.{Colors.RESET}")
             return
+        if response.status_code == 429:
+            print(f"{Colors.YELLOW}[!] Rate limited by Instagram. Wait before trying again.{Colors.RESET}")
+            return
+        if response.status_code >= 500:
+            print(f"{Colors.YELLOW}[!] Instagram returned a server error (HTTP {response.status_code}). Try again later.{Colors.RESET}")
+            return
         if "Sorry, this page isn't available" in response.text:
             print(f"{Colors.RED}[!] Error: This page is unavailable or the account is private/banned.{Colors.RESET}")
             return
